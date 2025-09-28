@@ -62,7 +62,7 @@ const Footer = () => {
                         element.scrollIntoView({ behavior: "smooth" });
                       }
                     }}
-                    className="block text-background/80 hover:text-background transition-colors duration-300"
+                    className="block text-background/80 hover:text-background transition-colors duration-300 hover:underline underline-offset-4"
                   >
                     {item}
                   </button>
