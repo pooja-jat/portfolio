@@ -1,6 +1,8 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -55,6 +57,10 @@ const Footer = () => {
                   <button
                     key={item}
                     onClick={() => {
+                      if (item === "Projects") {
+                        navigate("/projects");
+                        return;
+                      }
                       const element = document.getElementById(
                         item.toLowerCase()
                       );

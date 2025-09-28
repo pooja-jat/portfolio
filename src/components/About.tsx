@@ -75,28 +75,22 @@ const About = () => {
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Aspiring Full Stack Developer skilled in MERN and MEAN stacks,
-                with hands-on experience building 20+ projects during a
-                comprehensive full-stack development course. I have developed
-                responsive, user-friendly web applications such as a Daily Dabba
-                App, Crypto App, and Weather App, focusing on clean UI, RESTful
-                APIs, and seamless user experiences. I am passionate about
-                learning new technologies, solving challenging problems, and
-                contributing to impactful projects. With a strong foundation in
-                both frontend and backend development, I am eager to apply my
-                skills in a professional setting and grow as a developer.
+                I’m an aspiring <b>Full Stack Developer</b> skilled in{" "}
+                <b>MERN stack</b>, with hands-on experience building 20+
+                projects. I have developed responsive and user-friendly apps
+                like a Crypto App, Weather App, and Daily Dabba App, focusing on
+                clean UI, RESTful APIs, and smooth user experiences.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I specialize in the MERN stack, building responsive and
-                user-friendly applications that focus on smooth user
-                experiences. My approach combines the skills I gained through
-                hands-on projects with creative problem-solving to deliver
-                practical and effective solutions.
+                Passionate about learning new technologies and solving
+                real-world problems, I aim to apply my skills in professional
+                projects and grow as a developer.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                When I’m not coding, I enjoy exploring new technologies,
-                experimenting with personal projects, and learning from the
-                developer community
+                <i>
+                  When I’m not coding, I enjoy exploring new tools, building
+                  personal projects, and engaging with the developer community.
+                </i>
               </p>
             </div>
 

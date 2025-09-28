@@ -201,9 +201,7 @@ const Contact = () => {
             {/* Contact Form */}
             <Card
               className={`card-gradient border-0 shadow-medium transition-all duration-700 ${
-                isVisible
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 translate-x-10"
+                isVisible ? "opacity-100 translate-x-0" : "opacity-0 "
               }`}
             >
               <CardHeader>

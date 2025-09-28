@@ -12,12 +12,26 @@ import {
 } from "@/components/ui/card";
 
 interface ProjectCardProps {
+  isVisible: boolean;
   project: Project;
 }
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({ project, isVisible }: ProjectCardProps) => {
   return (
-    <Card className="group overflow-hidden border border-border bg-card hover:shadow-lg transition-all duration-300 hover:border-border/80">
+    <Card
+      className={`
+    group 
+    overflow-hidden 
+    border 
+    border-border 
+    bg-card 
+    hover:shadow-lg 
+    transition-all 
+    duration-500 
+    hover:border-border/80
+    ${isVisible ? "animate-fade-in" : ""}
+    `}
+    >
       {/* Project Image */}
       <div className="relative overflow-hidden bg-muted/20">
         <img
@@ -48,7 +62,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         {/* Technologies */}
         <div className="flex flex-wrap gap-1.5">
           {project.technologies.slice(0, 4).map((tech) => (
-            <Badge key={tech} variant="outline" className="text-xs px-2 py-0.5">
+            <Badge
+              key={tech}
+              variant="outline"
+              className="tech-gradient text-xs px-2 py-0.5"
+            >
               {tech}
             </Badge>
           ))}

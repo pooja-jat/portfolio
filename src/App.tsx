@@ -6,6 +6,7 @@ import { ThemeProviderWrapper } from "./contexts/ThemeContext";
 import MainPage from "./pages/MainPage";
 import NotFound from "./pages/NotFound";
 import Projects from "./pages/Projects";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -15,10 +16,12 @@ const App = () => {
       window.history.scrollRestoration = "manual";
     }
   }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProviderWrapper>
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/projects" element={<Projects />} />
