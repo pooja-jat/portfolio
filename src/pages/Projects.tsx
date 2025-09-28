@@ -18,6 +18,7 @@ const Projects = () => {
     { value: "html/css", label: "HTML/CSS UI" },
     { value: "nonReact", label: "JavaScript" },
     { value: "react", label: "React" },
+    { value: "frontend", label: "Frontend" },
     // { value: "nextjs", label: "Next.js" },
     { value: "backend", label: "Backend" },
     // { value: "fullstack", label: "Full Stack" },
@@ -27,6 +28,13 @@ const Projects = () => {
     let unsortedProjects = [];
     if (category === "all") {
       unsortedProjects = [...projects];
+    } else if (category === "frontend") {
+      unsortedProjects = projects.filter(
+        (project) =>
+          project.category.includes("react") ||
+          project.category.includes("nonReact") ||
+          project.category.includes("html/css")
+      );
     } else {
       unsortedProjects = projects.filter((project) => {
         if (category === "fullstack") {
@@ -72,11 +80,9 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-background font-zalando overflow-scroll">
       <Navigation />
-      Test0
+
       <section id="projects" ref={sectionRef}>
-        Test1
         <div className="container mx-auto  px-4 py-12">
-          Test2
           <div
             className={`max-w-7xl mx-auto transition-all duration-1000 ${
               isVisible
@@ -84,55 +90,67 @@ const Projects = () => {
                 : "opacity-100 translate-y-0"
             }`}
           >
-            Test3
             {/* Header */}
             <div className="mb-4 pt-6 sm:pb-0 md:pb-2 text-center">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
                 My <span className="text-gradient">Projects</span>
               </h2>
             </div>
-            Test4
+
             {/* Tabs Navigation */}
             <Tabs defaultValue="all" className="w-full">
               {/* Desktop */}
               <div className="hidden md:flex justify-center mb-8">
                 <TabsList className="grid  max-w-4xl grid-cols-5 text-muted/70 bg-gray-800 h-12">
-                  {categories.map((category) => (
-                    <TabsTrigger
-                      key={category.value}
-                      value={category.value}
-                      className="text-sm  px-6 py-2 data-[state=active]:bg-background data-[state=active]:shadow-sm"
-                    >
-                      <span>{category.label}</span>
-                      <span className="hidden data-[state=active]:inline-block md:inline-block ">
-                        ({getFilteredProjects(category.value).length})
-                      </span>
-                    </TabsTrigger>
-                  ))}
+                  {categories.map((category) => {
+                    if (category.value === "frontend") {
+                      return null;
+                    }
+                    return (
+                      <TabsTrigger
+                        key={category.value}
+                        value={category.value}
+                        className="text-sm  px-6 py-2 data-[state=active]:bg-background data-[state=active]:shadow-sm"
+                      >
+                        <span>{category.label}</span>
+                        <span className="hidden data-[state=active]:inline-block md:inline-block ">
+                          ({getFilteredProjects(category.value).length})
+                        </span>
+                      </TabsTrigger>
+                    );
+                  })}
                 </TabsList>
               </div>
 
               {/* Mobile */}
               <div className="sm:block md:hidden flex justify-center ">
-                Test5
                 <TabsList className="bg-inherit">
-                  {categories.map((category) => (
-                    <TabsTrigger
-                      key={category.value}
-                      value={category.value}
-                      className="data-[state=active]:text-gradient data-[state=active]:shadow-none data-[state=active]:underline underline-offset-4 "
-                    >
-                      <span className="data-[state=active]:text-gradient">
-                        {category.label}
-                      </span>
-                      <Span
+                  {categories.map((category) => {
+                    if (
+                      category.value === "html/css" ||
+                      category.value === "nonReact" ||
+                      category.value === "react"
+                    ) {
+                      return null;
+                    }
+                    return (
+                      <TabsTrigger
+                        key={category.value}
                         value={category.value}
-                        className="hidden data-[state=active]:inline-block"
+                        className="data-[state=active]:text-gradient data-[state=active]:shadow-none data-[state=active]:underline underline-offset-4 "
                       >
-                        ({getFilteredProjects(category.value).length})
-                      </Span>
-                    </TabsTrigger>
-                  ))}
+                        <span className="data-[state=active]:text-gradient">
+                          {category.label}
+                        </span>
+                        <Span
+                          value={category.value}
+                          className="hidden data-[state=active]:inline-block"
+                        >
+                          ({getFilteredProjects(category.value).length})
+                        </Span>
+                      </TabsTrigger>
+                    );
+                  })}
                 </TabsList>
               </div>
 
