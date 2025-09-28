@@ -81,7 +81,7 @@ const Projects = () => {
             className={`max-w-7xl mx-auto transition-all duration-1000 ${
               isVisible
                 ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
+                : "opacity-100 translate-y-0"
             }`}
           >
             Test3
