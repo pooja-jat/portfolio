@@ -72,8 +72,11 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-background font-zalando overflow-scroll">
       <Navigation />
+      Test0
       <section id="projects" ref={sectionRef}>
+        Test1
         <div className="container mx-auto  px-4 py-12">
+          Test2
           <div
             className={`max-w-7xl mx-auto transition-all duration-1000 ${
               isVisible
@@ -81,13 +84,14 @@ const Projects = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
+            Test3
             {/* Header */}
             <div className="mb-4 pt-6 sm:pb-0 md:pb-2 text-center">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
                 My <span className="text-gradient">Projects</span>
               </h2>
             </div>
-
+            Test4
             {/* Tabs Navigation */}
             <Tabs defaultValue="all" className="w-full">
               {/* Desktop */}
@@ -109,7 +113,8 @@ const Projects = () => {
               </div>
 
               {/* Mobile */}
-              <div className="md:hidden flex justify-center ">
+              <div className="sm:block md:hidden flex justify-center ">
+                Test5
                 <TabsList className="bg-inherit">
                   {categories.map((category) => (
                     <TabsTrigger
@@ -157,7 +162,6 @@ const Projects = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
