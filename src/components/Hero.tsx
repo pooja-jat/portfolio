@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBackground from "@/assets/hero-background.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsVisible(true);
@@ -58,7 +59,7 @@ const Hero = () => {
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-bounce-in">
             <Button
-              onClick={() => scrollToSection("projects")}
+              onClick={() => navigate("/projects")}
               size="lg"
               className="hero-gradient text-white font-semibold px-8 py-3 rounded-full hover-glow transition-all duration-300"
             >

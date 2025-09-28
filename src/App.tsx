@@ -1,22 +1,33 @@
+import { useEffect } from "react";
+
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProviderWrapper } from "./contexts/ThemeContext";
-import Index from "./pages/Index";
+import MainPage from "./pages/MainPage";
 import NotFound from "./pages/NotFound";
+import Projects from "./pages/Projects";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <ThemeProviderWrapper>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </ThemeProviderWrapper>
-  </QueryClientProvider>
-);
+const App = () => {
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ThemeProviderWrapper>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeProviderWrapper>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
