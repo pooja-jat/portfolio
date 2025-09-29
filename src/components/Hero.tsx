@@ -23,33 +23,32 @@ const Hero = () => {
       id="hero"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
-        // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className=" container mx-auto px-6 sm:px-6 lg:px-8 text-center">
         <div
-          className={`max-w-4xl mx-auto transition-all duration-1000 ${
+          className={`  mx-auto flex flex-col items-center justify-around h-screen py-16 max-w-4xl transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
           {/* Introduction */}
-          <div className="mb-6">
-            <p className="text-lg sm:text-xl text-black/70 font-medium mb-2 animate-fade-in">
+          <div className="flex flex-col items-center xl:gap-4">
+            <p className="text-lg sm:text-xl xl:text-2xl text-black/70 font-medium  animate-fade-in">
               Hello, I'm
             </p>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-black/90 mb-4 animate-slide-up">
+            <h1 className="mb-2 text-4xl sm:text-6xl lg:text-7xl font-bold text-black/90 animate-slide-up">
               Pooja Jat
             </h1>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient mb-6 animate-slide-up">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient animate-slide-up">
               Full-Stack Developer
             </h2>
           </div>
 
           {/* Description */}
-          <p className="text-lg sm:text-xl text-black/50 max-w-3xl mx-auto mb-8 leading-relaxed animate-fade-in">
+          <p className="sm:text-md md:text-lg lg:text-lg xl:text-xl flex items-center leading-[1.75rem] max-w-3xl py-2  animate-fade-in text-black/50 ">
             Aspiring Full Stack Developer with hands-on experience in MERN stack
             through completing a comprehensive full-stack development course.
             Developed 20+ projects, focusing on building responsive web
@@ -57,7 +56,7 @@ const Hero = () => {
           </p>
 
           {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-bounce-in">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-bounce-in">
             <Button
               onClick={() => navigate("/projects")}
               size="lg"
@@ -76,7 +75,7 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-6 mb-12 animate-scale-in">
+          <div className="flex justify-center space-x-6 animate-scale-in">
             <a
               href="https://github.com/pooja-jat"
               target="_blank"
