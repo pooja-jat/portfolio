@@ -1,4 +1,5 @@
 import { Project } from "./type";
+import crypto from "./assets/thumnail/crypto.png";
 
 export const projects: Project[] = [
   // HTML CSS
@@ -15,7 +16,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/panfila-clone-website",
     liveUrl: "https://pooja-jat.github.io/panfila-clone-website/",
-    featured: true,
   },
   {
     id: 2,
@@ -30,7 +30,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/whatsapp-clone",
     liveUrl: "https://pooja-jat.github.io/whatsapp-clone/",
-    featured: true,
   },
   {
     id: 3,
@@ -45,7 +44,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/starbucks",
     liveUrl: "https://pooja-jat.github.io/starbucks/",
-    featured: true,
   },
   {
     id: 4,
@@ -60,7 +58,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/Energy",
     liveUrl: "https://pooja-jat.github.io/Energy/",
-    featured: true,
   },
   {
     id: 5,
@@ -75,8 +72,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/Event-planner",
     liveUrl: "https://pooja-jat.github.io/Event-planner/",
-
-    featured: true,
   },
   {
     id: 6,
@@ -91,7 +86,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/IEA",
     liveUrl: "https://pooja-jat.github.io/IEA/",
-    featured: true,
   },
   {
     id: 7,
@@ -106,7 +100,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/zerodha",
     liveUrl: "https://pooja-jat.github.io/zerodha/",
-    featured: true,
   },
   {
     id: 8,
@@ -121,7 +114,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/ander-G",
     liveUrl: "https://pooja-jat.github.io/ander-G/",
-    featured: true,
   },
 
   // JS Projects
@@ -138,7 +130,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/Temperature",
     liveUrl: "https://pooja-jat.github.io/Temperature/",
-    featured: true,
   },
   {
     id: 10,
@@ -153,7 +144,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/Random-jokes",
     liveUrl: "https://pooja-jat.github.io/Random-jokes/",
-    featured: true,
   },
   {
     id: 11,
@@ -168,7 +158,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://pooja-jat.github.io/Weather-UI/",
     liveUrl: "https://pooja-jat.github.io/Weather-UI/",
-    featured: true,
   },
 
   // React Project
@@ -185,12 +174,12 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/Todo-UI",
     liveUrl: "https://todo-ui-blue.vercel.app/",
-    featured: true,
   },
   {
     id: 13,
     startedOn: "Apr 8, 2025",
     title: "PokeGame",
+    isFeatured: true,
     priority: 101,
     description:
       "A real-time cryptocurrency dashboard built with React, fetching live data via CoinGecko API.",
@@ -200,12 +189,12 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/pokedex-game",
     liveUrl: "https://pokedex-game-wine.vercel.app",
-    featured: true,
   },
   {
     id: 14,
     startedOn: "Apr 16, 2025",
     title: "Khatabook (Web)",
+    isFeatured: true,
     priority: 103,
     description:
       "A bookkeeping application built with React and Redux, demonstrating state management and CRUD operations.",
@@ -215,7 +204,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "hhttps://github.com/pooja-jat/Redux-Khatabook",
     liveUrl: "https://redux-khatabook.vercel.app/",
-    featured: true,
   },
   {
     id: 15,
@@ -230,7 +218,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/employee-mgmt",
     liveUrl: "https://employee-mgmt-six.vercel.app/",
-    featured: true,
   },
   {
     id: 16,
@@ -241,11 +228,10 @@ export const projects: Project[] = [
       "A real-time cryptocurrency dashboard built with React, fetching live data via CoinGecko API.",
     category: ["react"],
     technologies: ["React", "Javascript", "RestAPI", "HTML", "CSS"],
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+    image: crypto,
+    isFeatured: true,
     githubUrl: "https://github.com/pooja-jat/crypto",
     liveUrl: "https://crypto-k5i8h6txw-pooja-jats-projects.vercel.app/",
-    featured: true,
   },
 
   // Backend only Project
@@ -262,7 +248,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/crud_api",
     liveUrl: "https://crud-api-1-0ji9.onrender.com/",
-    featured: true,
   },
   {
     id: 17,
@@ -277,6 +262,5 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     githubUrl: "https://github.com/pooja-jat/blog-api",
     liveUrl: "https://blog-api-7xmw.onrender.com/",
-    featured: true,
   },
 ];

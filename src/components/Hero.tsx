@@ -75,7 +75,7 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-6 animate-scale-in">
+          <div className="flex justify-center space-x-6 animate-scale-in my-4">
             <a
               href="https://github.com/pooja-jat"
               target="_blank"

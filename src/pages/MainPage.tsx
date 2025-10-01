@@ -2,9 +2,10 @@ import { useEffect } from "react";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import FeaturedProjects from "@/components/FeaturedProjects";
 
 const MainPage = () => {
   useEffect(() => {
@@ -20,8 +21,8 @@ const MainPage = () => {
       <main>
         <Hero />
         <About />
+        <FeaturedProjects />
         <Skills />
-        {/* <Projects /> */}
         <Contact />
       </main>
       <Footer />

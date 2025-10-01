@@ -22,6 +22,7 @@ export interface Project {
   id: number;
   priority: number;
   title: string;
+  isFeatured?: boolean;
   description: string;
   category: ProjectCategory[];
   technologies: Technology[];
