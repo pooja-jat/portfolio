@@ -21,6 +21,48 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
 
+const contactInfo = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: "patelpoojajat@gmail.com",
+    href: "mailto:patelpoojajat@gmail.com",
+  },
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "+91 (626) 0XX-XXXX",
+    href: "tel:+916260XXXXXX",
+  },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: "Indore, India",
+    href: "https://maps.google.com",
+  },
+];
+
+const socialLinks = [
+  {
+    icon: Github,
+    label: "GitHub",
+    href: "https://github.com/pooja-jat",
+    color: "hover:text-gray-900",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/pooja-jat-5ab529326/",
+    color: "hover:text-blue-600",
+  },
+  {
+    icon: Twitter,
+    label: "Twitter",
+    href: "https://twitter.com",
+    color: "hover:text-blue-400",
+  },
+];
+
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -35,11 +77,9 @@ const Contact = () => {
       },
       { threshold: 0.1 }
     );
-
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
     return () => observer.disconnect();
   }, []);
 
@@ -47,59 +87,41 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    const formData = new FormData(e.currentTarget);
+    const firstName = formData.get("firstName");
+    const lastName = formData.get("lastName");
+    const email = formData.get("email");
+    const message = formData.get("message");
 
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
+    const url = "https://portfolio-backend-3rmg.onrender.com/api/users";
+    // const url = "http://localhost:5000/api/users";
 
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+    try {
+      // post method
+      await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email,
+          message,
+        }),
+      });
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      (e.target as HTMLFormElement).reset();
+    } catch (error) {
+      console.log("error", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "patelpoojajat@gmail.com",
-      href: "mailto:patelpoojajat@gmail.com",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+91 (626) 0XX-XXXX",
-      href: "tel:+916260XXXXXX",
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "Indore, India",
-      href: "https://maps.google.com",
-    },
-  ];
-
-  const socialLinks = [
-    {
-      icon: Github,
-      label: "GitHub",
-      href: "https://github.com/pooja-jat",
-      color: "hover:text-gray-900",
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/pooja-jat-5ab529326/",
-      color: "hover:text-blue-600",
-    },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com",
-      color: "hover:text-blue-400",
-    },
-  ];
 
   return (
     <section id="contact" ref={sectionRef} className="py-20 bg-background">
@@ -219,7 +241,6 @@ const Contact = () => {
                       <Input
                         id="firstName"
                         name="firstName"
-                        required
                         className="transition-all duration-300 focus:shadow-soft"
                       />
                     </div>
@@ -228,7 +249,6 @@ const Contact = () => {
                       <Input
                         id="lastName"
                         name="lastName"
-                        required
                         className="transition-all duration-300 focus:shadow-soft"
                       />
                     </div>
@@ -240,7 +260,6 @@ const Contact = () => {
                       id="email"
                       name="email"
                       type="email"
-                      required
                       className="transition-all duration-300 focus:shadow-soft"
                     />
                   </div>
