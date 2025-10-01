@@ -80,7 +80,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" ref={sectionRef} className="py-20 bg-background">
+    <section id="skills" ref={sectionRef} className="py-16 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`max-w-7xl mx-auto transition-all duration-1000 ${
@@ -88,12 +88,12 @@ const Skills = () => {
           }`}
         >
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               Technical <span className="text-gradient">Skills</span>
             </h2>
             <div className="w-24 h-1 hero-gradient mx-auto rounded-full mb-8"></div>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm md:text-lg text-muted-foreground max-w-3xl mx-auto">
               Here are the technologies and tools I use to bring ideas to life.
             </p>
           </div>

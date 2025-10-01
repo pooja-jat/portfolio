@@ -124,7 +124,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" ref={sectionRef} className="py-20 bg-background">
+    <section
+      id="contact"
+      ref={sectionRef}
+      className="py-8 md:py-16 bg-background"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`max-w-6xl mx-auto transition-all duration-1000 ${
@@ -132,12 +136,12 @@ const Contact = () => {
           }`}
         >
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               Get In <span className="text-gradient">Touch</span>
             </h2>
-            <div className="w-24 h-1 hero-gradient mx-auto rounded-full mb-8"></div>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <div className="w-24 h-1 hero-gradient mx-auto rounded-full mb-4 md:mb-8"></div>
+            <p className="text-sm md:text-lg text-muted-foreground max-w-3xl mx-auto">
               I'm always interested in new opportunities and exciting projects.
               Let's discuss how we can work together to bring your ideas to
               life.
@@ -154,8 +158,10 @@ const Contact = () => {
               }`}
             >
               <div>
-                <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6">
+                  Let's Connect
+                </h3>
+                <p className="text-sm md:text-lg text-muted-foreground leading-relaxed mb-8">
                   Whether you're looking for a developer to join your team, need
                   help with a project, or just want to chat about technology,
                   I'd love to hear from you.
@@ -201,7 +207,7 @@ const Contact = () => {
               </div>
 
               {/* Social Links */}
-              <div className="pt-8">
+              <div className="md:pt-8 hidden md:visible">
                 <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
@@ -222,7 +228,7 @@ const Contact = () => {
 
             {/* Contact Form */}
             <Card
-              className={`card-gradient border-0 shadow-medium transition-all duration-700 ${
+              className={`card-gradient border-0 md:shadow-medium transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 "
               }`}
             >

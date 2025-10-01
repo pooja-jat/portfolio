@@ -54,7 +54,11 @@ const FeaturedProjects = () => {
   const featuredProjects = projects.filter((p) => p.isFeatured);
 
   return (
-    <section id="about" ref={sectionRef} className="py-20 bg-accent/50">
+    <section
+      id="about"
+      ref={sectionRef}
+      className="pb-8 md:pb-16 md:py-16 bg-accent/50"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`max-w-6xl mx-auto transition-all duration-1000 flex flex-col ${
@@ -62,7 +66,7 @@ const FeaturedProjects = () => {
           }`}
         >
           {/* Section Header */}
-          <div className="text-center mb-8">
+          <div className="text-center md:mb-8">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               Featured <span className="text-gradient">Projects</span>
             </h2>

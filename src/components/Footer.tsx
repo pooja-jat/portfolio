@@ -41,7 +41,7 @@ const Footer = () => {
               >
                 Pooja Jat
               </button>
-              <p className="text-background/80 leading-relaxed">
+              <p className="text-background/80 leading-relaxed text-sm md:text-lg">
                 MERN Developer passionate about building responsive and
                 innovative web applications, combining strong front-end and
                 full-stack skills with problem-solving and a keen eye for clean,
@@ -68,7 +68,7 @@ const Footer = () => {
                         element.scrollIntoView({ behavior: "smooth" });
                       }
                     }}
-                    className="block text-background/80 hover:text-background transition-colors duration-300 hover:underline underline-offset-4"
+                    className="text-sm md:text-lg block text-background/80 hover:text-background transition-colors duration-300 hover:underline underline-offset-4"
                   >
                     {item}
                   </button>
@@ -80,9 +80,9 @@ const Footer = () => {
             <div className="space-y-4">
               <h3 className="text-lg font-semibold">Get In Touch</h3>
               <div className="space-y-2 text-background/80">
-                <p>Indore, India, CA</p>
-                <p>patelpoojajat@gmail.com</p>
-                <p>+91 (626) 0XX-XXXX</p>
+                <p className="text-sm md:text-lg">Indore, India, CA</p>
+                <p className="text-sm md:text-lg">patelpoojajat@gmail.com</p>
+                <p className="text-sm md:text-lg">+91 (626) 0XX-XXXX</p>
               </div>
               <div className="flex space-x-4 pt-2">
                 {socialLinks.map((social, index) => (

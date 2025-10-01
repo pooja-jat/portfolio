@@ -231,7 +231,7 @@ export const projects: Project[] = [
     image: crypto,
     isFeatured: true,
     githubUrl: "https://github.com/pooja-jat/crypto",
-    liveUrl: "https://crypto-k5i8h6txw-pooja-jats-projects.vercel.app/",
+    liveUrl: "https://crypto-ten-brown.vercel.app/",
   },
 
   // Backend only Project

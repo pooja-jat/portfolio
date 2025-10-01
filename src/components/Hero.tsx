@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { h1 } from "@/theme/classnames";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,12 +37,10 @@ const Hero = () => {
         >
           {/* Introduction */}
           <div className="flex flex-col items-center xl:gap-4">
-            <p className="text-lg sm:text-xl xl:text-2xl text-black/70 font-medium  animate-fade-in">
+            <p className="sm:text-xl xl:text-2xl text-black/70 font-medium  animate-fade-in">
               Hello, I'm
             </p>
-            <h1 className="mb-2 text-4xl sm:text-6xl lg:text-7xl font-bold text-black/90 animate-slide-up">
-              Pooja Jat
-            </h1>
+            <h1 className={`${h1} mb-2 animate-slide-up`}>Pooja Jat</h1>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient animate-slide-up">
               Full-Stack Developer
             </h2>
