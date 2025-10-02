@@ -3,6 +3,7 @@ import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { h1 } from "@/theme/classnames";
+import pooja from "../assets/images/pooja.png";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,15 +30,46 @@ const Hero = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className=" container mx-auto px-6 sm:px-6 lg:px-8 text-center">
+      <div className=" container mx-autom max-w-6xl   px-6 sm:px-6 lg:px-8 text-center flex flex-row items-center justify-center">
+        <div className="w-[50%] flex flex-col items-center justify-center hidden md:flex gap-">
+          <img
+            src={pooja}
+            alt="Pooja Jat"
+            className="w-100 h-100 rounded-full object-cover mt-4 mb-2 shadow-lg animate-fade-in"
+          />
+          <div className="flex justify-center space-x-6 animate-scale-in">
+            <a
+              href="https://github.com/pooja-jat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 rounded-full p-2 hover:text-white hover:bg-gray-700 transition-all duration-600 tech-icon"
+            >
+              <Github size={28} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/pooja-jat-5ab529326/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 rounded-full p-2 hover:text-white hover:bg-gray-700 transition-all duration-600 tech-icon"
+            >
+              <Linkedin size={28} />
+            </a>
+            <a
+              href="mailto:patelpoojajat@gmail.com"
+              className="text-gray-700 rounded-full p-2 hover:text-white hover:bg-gray-700 transition-all duration-600 tech-icon"
+            >
+              <Mail size={28} />
+            </a>
+          </div>
+        </div>
         <div
-          className={`  mx-auto flex flex-col items-center justify-around h-screen py-16 max-w-4xl transition-all duration-1000 ${
+          className={`p-8  flex flex-col items-center justify-center gap-8 h-screen py-16 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
           {/* Introduction */}
           <div className="flex flex-col items-center xl:gap-4">
-            <p className="sm:text-xl xl:text-2xl text-black/70 font-medium  animate-fade-in">
+            <p className="sm:text-xl xl:text-xl text-black/70 font-medium  animate-fade-in">
               Hello, I'm
             </p>
             <h1 className={`${h1} mb-2 animate-slide-up`}>Pooja Jat</h1>
@@ -46,8 +78,40 @@ const Hero = () => {
             </h2>
           </div>
 
+          <div className="w-[50%] flex flex-col items-center justify-center flex md:hidden gap-">
+            <img
+              src={pooja}
+              alt="Pooja Jat"
+              className="w-100 h-100 rounded-full object-cover mt-4 mb-2 shadow-lg animate-fade-in"
+            />
+            <div className="hidden md:flex justify-center space-x-6 animate-scale-in">
+              <a
+                href="https://github.com/pooja-jat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 rounded-full p-2 hover:text-white hover:bg-gray-700 transition-all duration-600 tech-icon"
+              >
+                <Github size={28} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/pooja-jat-5ab529326/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 rounded-full p-2 hover:text-white hover:bg-gray-700 transition-all duration-600 tech-icon"
+              >
+                <Linkedin size={28} />
+              </a>
+              <a
+                href="mailto:patelpoojajat@gmail.com"
+                className="text-gray-700 rounded-full p-2 hover:text-white hover:bg-gray-700 transition-all duration-600 tech-icon"
+              >
+                <Mail size={28} />
+              </a>
+            </div>
+          </div>
+
           {/* Description */}
-          <p className="sm:text-md md:text-lg lg:text-lg xl:text-xl flex items-center leading-[1.75rem] max-w-3xl py-2  animate-fade-in text-black/50 ">
+          <p className="text-xs md:text-sm lg:text-lg xl:text-lg flex items-center leading-[1.25rem]  md:leading-[1.75rem] max-w-3xl  animate-fade-in text-black/50 ">
             Aspiring Full Stack Developer with hands-on experience in MERN stack
             through completing a comprehensive full-stack development course.
             Developed 15+ projects, focusing on building responsive web
@@ -74,7 +138,7 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-6 animate-scale-in my-4">
+          <div className="flex md:hidden justify-center space-x-6 animate-scale-in my-4">
             <a
               href="https://github.com/pooja-jat"
               target="_blank"
