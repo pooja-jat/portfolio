@@ -50,7 +50,7 @@ const Hero = () => {
           <p className="sm:text-md md:text-lg lg:text-lg xl:text-xl flex items-center leading-[1.75rem] max-w-3xl py-2  animate-fade-in text-black/50 ">
             Aspiring Full Stack Developer with hands-on experience in MERN stack
             through completing a comprehensive full-stack development course.
-            Developed 20+ projects, focusing on building responsive web
+            Developed 15+ projects, focusing on building responsive web
             applications with clean design and seamless user experience.
           </p>
 

@@ -1,5 +1,17 @@
 import { Project } from "./type";
 import crypto from "./assets/thumnail/crypto.png";
+import pokedex from "./assets/thumnail/pokedex.png";
+import todo from "./assets/thumnail/todo.png";
+import khatabook from "./assets/thumnail/khatabook.png";
+import starbucks from "./assets/thumnail/starbucks.png";
+import eventplanner from "./assets/thumnail/eventplanner.png";
+import energy from "./assets/thumnail/energy.png";
+import whatsapp from "./assets/thumnail/whatsapp.png";
+import temperature from "./assets/thumnail/temperature.png";
+import weather from "./assets/thumnail/weather.png";
+import zerodha from "./assets/thumnail/zerodha.png";
+import  emgmt from "./assets/thumnail/emgmt.png";
+
 
 export const projects: Project[] = [
   // HTML CSS
@@ -27,7 +39,7 @@ export const projects: Project[] = [
     category: ["html/css"],
     technologies: ["HTML", "CSS"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+      whatsapp,
     githubUrl: "https://github.com/pooja-jat/whatsapp-clone",
     liveUrl: "https://pooja-jat.github.io/whatsapp-clone/",
   },
@@ -41,7 +53,7 @@ export const projects: Project[] = [
     category: ["html/css"],
     technologies: ["HTML", "CSS"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+      starbucks,
     githubUrl: "https://github.com/pooja-jat/starbucks",
     liveUrl: "https://pooja-jat.github.io/starbucks/",
   },
@@ -55,7 +67,7 @@ export const projects: Project[] = [
     category: ["html/css"],
     technologies: ["HTML", "CSS"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+     energy,
     githubUrl: "https://github.com/pooja-jat/Energy",
     liveUrl: "https://pooja-jat.github.io/Energy/",
   },
@@ -69,7 +81,7 @@ export const projects: Project[] = [
     category: ["html/css"],
     technologies: ["HTML", "CSS"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+      eventplanner,
     githubUrl: "https://github.com/pooja-jat/Event-planner",
     liveUrl: "https://pooja-jat.github.io/Event-planner/",
   },
@@ -83,7 +95,7 @@ export const projects: Project[] = [
     category: ["html/css"],
     technologies: ["HTML", "CSS"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+     energy,
     githubUrl: "https://github.com/pooja-jat/IEA",
     liveUrl: "https://pooja-jat.github.io/IEA/",
   },
@@ -97,7 +109,7 @@ export const projects: Project[] = [
     category: ["html/css"],
     technologies: ["HTML", "CSS"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+     zerodha,
     githubUrl: "https://github.com/pooja-jat/zerodha",
     liveUrl: "https://pooja-jat.github.io/zerodha/",
   },
@@ -127,7 +139,7 @@ export const projects: Project[] = [
     category: ["nonReact"],
     technologies: ["Javascript", "HTML", "CSS"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+      temperature,
     githubUrl: "https://github.com/pooja-jat/Temperature",
     liveUrl: "https://pooja-jat.github.io/Temperature/",
   },
@@ -155,7 +167,7 @@ export const projects: Project[] = [
     category: ["nonReact"],
     technologies: ["Javascript", "RestAPI", "HTML", "CSS"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+      weather,
     githubUrl: "https://pooja-jat.github.io/Weather-UI/",
     liveUrl: "https://pooja-jat.github.io/Weather-UI/",
   },
@@ -171,7 +183,7 @@ export const projects: Project[] = [
     category: ["react"],
     technologies: ["React", "Javascript", "HTML", "CSS"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+      todo,
     githubUrl: "https://github.com/pooja-jat/Todo-UI",
     liveUrl: "https://todo-ui-blue.vercel.app/",
   },
@@ -186,7 +198,7 @@ export const projects: Project[] = [
     category: ["react"],
     technologies: ["React", "Javascript", "RestAPI", "HTML", "CSS"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+     pokedex,
     githubUrl: "https://github.com/pooja-jat/pokedex-game",
     liveUrl: "https://pokedex-game-wine.vercel.app",
   },
@@ -201,7 +213,7 @@ export const projects: Project[] = [
     category: ["react"],
     technologies: ["React", "Javascript", "TailwindCSS", "HTML", "CSS"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+     khatabook,
     githubUrl: "hhttps://github.com/pooja-jat/Redux-Khatabook",
     liveUrl: "https://redux-khatabook.vercel.app/",
   },
@@ -215,7 +227,7 @@ export const projects: Project[] = [
     category: ["react"],
     technologies: ["React", "Javascript", "TailwindCSS", "HTML", "CSS"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+     emgmt,
     githubUrl: "https://github.com/pooja-jat/employee-mgmt",
     liveUrl: "https://employee-mgmt-six.vercel.app/",
   },

@@ -35,7 +35,7 @@ const FeaturedProjects = () => {
       icon: Users,
       title: "Team Player",
       description:
-        "Built 20+ full-stack projects using MERN and MEAN stacks, focusing on responsive and user-friendly design.",
+        "Built 15+ full-stack projects using MERN and MEAN stacks, focusing on responsive and user-friendly design.",
     },
     {
       icon: Lightbulb,
@@ -92,7 +92,7 @@ const FeaturedProjects = () => {
             className="underline underline-offset-2 text-center mt-8"
             href="/projects"
           >
-            View all projects
+            View all projects ({projects.length})
           </a>
         </div>
       </div>

@@ -33,7 +33,7 @@ const About = () => {
       icon: Users,
       title: "Team Player",
       description:
-        "Built 20+ full-stack projects using MERN and MEAN stacks, focusing on responsive and user-friendly design.",
+        "Built 15+ full-stack projects using MERN and MEAN stacks, focusing on responsive and user-friendly design.",
     },
     {
       icon: Lightbulb,
@@ -78,7 +78,7 @@ const About = () => {
               <h3 className="text-2xl font-semibold">My Journey</h3>
               <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
                 I’m an aspiring <b>Full Stack Developer</b> skilled in{" "}
-                <b>MERN stack</b>, with hands-on experience building 20+
+                <b>MERN stack</b>, with hands-on experience building 15+
                 projects. I have developed responsive and user-friendly apps
                 like a Crypto App, Weather App, and Daily Dabba App, focusing on
                 clean UI, RESTful APIs, and smooth user experiences.
