@@ -63,7 +63,7 @@ const Hero = () => {
           </div>
         </div>
         <div
-          className={`p-8  flex flex-col items-center justify-center gap-8 h-screen py-16 transition-all duration-1000 ${
+          className={`p-8  flex flex-col items-center justify-between md:justify-center gap-4 md:gap-8 h-screen py-16 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -78,11 +78,12 @@ const Hero = () => {
             </h2>
           </div>
 
-          <div className="w-[50%] flex flex-col items-center justify-center flex md:hidden gap-">
+          {/* Mobile Image */}
+          <div className="w-[50%] flex flex-col items-center justify-center md:hidden">
             <img
               src={pooja}
               alt="Pooja Jat"
-              className="w-100 h-100 rounded-full object-cover mt-4 mb-2 shadow-lg animate-fade-in"
+              className="w-100 h-100 rounded-full object-cover md:mt-4 mb-2 shadow-lg animate-fade-in"
             />
             <div className="hidden md:flex justify-center space-x-6 animate-scale-in">
               <a
@@ -111,7 +112,7 @@ const Hero = () => {
           </div>
 
           {/* Description */}
-          <p className="text-xs md:text-sm lg:text-lg xl:text-lg flex items-center leading-[1.25rem]  md:leading-[1.75rem] max-w-3xl  animate-fade-in text-black/50 ">
+          <p className="text-sm md:text-sm lg:text-lg xl:text-lg flex items-center leading-[1.25rem]  md:leading-[1.75rem] max-w-3xl  animate-fade-in text-black/50 ">
             Aspiring Full Stack Developer with hands-on experience in MERN stack
             through completing a comprehensive full-stack development course.
             Developed 15+ projects, focusing on building responsive web
@@ -119,7 +120,7 @@ const Hero = () => {
           </p>
 
           {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-bounce-in">
+          <div className="flex md:flex-col sm:flex-row gap-4 justify-center items-center animate-bounce-in">
             <Button
               onClick={() => navigate("/projects")}
               size="lg"
@@ -138,7 +139,7 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex md:hidden justify-center space-x-6 animate-scale-in my-4">
+          <div className="flex md:hidden justify-center space-x-6 animate-scale-in md:my-4">
             <a
               href="https://github.com/pooja-jat"
               target="_blank"
