@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProviderWrapper } from "./contexts/ThemeContext";
 import MainPage from "./pages/MainPage";
 import NotFound from "./pages/NotFound";
@@ -24,6 +24,7 @@ const App = () => {
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<MainPage />} />
+            <Route path="/v1" element={<Navigate to="/" replace />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
