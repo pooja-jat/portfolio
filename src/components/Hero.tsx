@@ -31,7 +31,7 @@ const Hero = () => {
       }}
     >
       <div className=" container mx-autom max-w-6xl   px-6 sm:px-6 lg:px-8 text-center flex flex-row items-center justify-center">
-        <div className="w-[50%] flex flex-col items-center justify-center hidden md:flex gap-">
+        <div className="w-[50%] flex-col items-center justify-center hidden md:flex gap-">
           <img
             src={pooja}
             alt="Pooja Jat"
