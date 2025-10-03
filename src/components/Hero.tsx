@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { h1 } from "@/theme/classnames";
 import pooja from "../assets/images/pooja.png";
 
 const Hero = () => {
@@ -31,7 +30,7 @@ const Hero = () => {
       }}
     >
       <div className=" container mx-autom max-w-6xl   px-6 sm:px-6 lg:px-8 text-center flex flex-row items-center justify-center">
-        <div className="w-[50%] flex-col items-center justify-center hidden md:flex gap-">
+        <div className="w-[50%] flex-col items-center justify-center hidden md:flex gap-4">
           <img
             src={pooja}
             alt="Pooja Jat"
@@ -68,11 +67,15 @@ const Hero = () => {
           }`}
         >
           {/* Introduction */}
-          <div className="flex flex-col items-center xl:gap-4">
-            <p className="sm:text-xl xl:text-xl text-black/70 font-medium  animate-fade-in">
+          <div className="flex flex-col items-center xl:gap-2 2xl:gap-4">
+            <p className="sm:text-xl xl:text-md text-black/70 font-medium  animate-fade-in">
               Hello, I'm
             </p>
-            <h1 className={`${h1} mb-2 animate-slide-up`}>Pooja Jat</h1>
+            <h1
+              className={`text-4xl lg:text-5xl 2xl:-7xl  font-bold text-black/90 mb-2 animate-slide-up`}
+            >
+              Pooja Jat
+            </h1>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient animate-slide-up">
               Full-Stack Developer
             </h2>
@@ -112,7 +115,7 @@ const Hero = () => {
           </div>
 
           {/* Description */}
-          <p className="text-sm md:text-sm lg:text-lg xl:text-lg flex items-center leading-[1.25rem]  md:leading-[1.75rem] max-w-3xl  animate-fade-in text-black/50 ">
+          <p className="text-sm md:text-sm lg:text-md xl:text-lg flex items-center leading-[1.25rem]  md:leading-[1.75rem] max-w-3xl  animate-fade-in text-black/50 ">
             Aspiring Full Stack Developer with hands-on experience in MERN stack
             through completing a comprehensive full-stack development course.
             Developed 15+ projects, focusing on building responsive web
@@ -120,7 +123,7 @@ const Hero = () => {
           </p>
 
           {/* Call to Action Buttons */}
-          <div className="flex md:flex-col sm:flex-row gap-4 justify-center items-center animate-bounce-in">
+          <div className="flex flex-row 2xl:flex-col  gap-4 justify-center items-center animate-bounce-in">
             <Button
               onClick={() => navigate("/projects")}
               size="lg"
