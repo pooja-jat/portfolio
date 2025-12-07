@@ -48,9 +48,6 @@ const ProjectCard = ({ project, isVisible }: ProjectCardProps) => {
             <CardTitle className="text-lg font-semibold line-clamp-1">
               {project.title}
             </CardTitle>
-            <Badge variant="secondary" className="text-xs font-medium w-fit">
-              {project.category}
-            </Badge>
           </div>
         </div>
         <CardDescription className="text-xs text-muted-foreground line-clamp-3">

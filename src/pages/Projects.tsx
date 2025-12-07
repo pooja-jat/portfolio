@@ -16,12 +16,12 @@ const Projects = () => {
   const categories: { value: ProjectCategory | "all"; label: string }[] = [
     { value: "all", label: "All" },
     { value: "html/css", label: "HTML/CSS UI" },
-    { value: "nonReact", label: "JavaScript" },
+    { value: "javaScript", label: "JavaScript" },
     { value: "react", label: "React" },
     { value: "frontend", label: "Frontend" },
     // { value: "nextjs", label: "Next.js" },
     { value: "backend", label: "Backend" },
-    // { value: "fullstack", label: "Full Stack" },
+    { value: "fullstack", label: "Full Stack" },
   ];
 
   const getFilteredProjects = (category: ProjectCategory | "all") => {
@@ -31,21 +31,15 @@ const Projects = () => {
     } else if (category === "frontend") {
       unsortedProjects = projects.filter(
         (project) =>
+          project.category.includes("fullstack") ||
           project.category.includes("react") ||
-          project.category.includes("nonReact") ||
+          project.category.includes("javaScript") ||
           project.category.includes("html/css")
       );
     } else {
-      unsortedProjects = projects.filter((project) => {
-        if (category === "fullstack") {
-          return (
-            (project.category.includes("react") ||
-              project.category.includes("nonReact")) &&
-            project.category.includes("backend")
-          );
-        }
-        return project.category.includes(category);
-      });
+      unsortedProjects = projects.filter((project) =>
+        project.category.includes(category)
+      );
     }
     return unsortedProjects.sort((a, b) => a.priority - b.priority);
   };
@@ -101,7 +95,7 @@ const Projects = () => {
             <Tabs defaultValue="all" className="w-full">
               {/* Desktop */}
               <div className="hidden md:flex justify-center mb-8">
-                <TabsList className="grid  max-w-4xl grid-cols-5 text-muted/70 bg-gray-800 h-12">
+                <TabsList className="grid  max-w-4xl grid-cols-6 text-muted/70 bg-gray-800 h-12">
                   {categories.map((category) => {
                     if (category.value === "frontend") {
                       return null;
@@ -128,7 +122,7 @@ const Projects = () => {
                   {categories.map((category) => {
                     if (
                       category.value === "html/css" ||
-                      category.value === "nonReact" ||
+                      category.value === "javaScript" ||
                       category.value === "react"
                     ) {
                       return null;

@@ -1,6 +1,6 @@
 export type ProjectCategory =
   | "html/css"
-  | "nonReact"
+  | "javaScript"
   | "frontend"
   | "backend"
   | "fullstack"
